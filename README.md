@@ -35,12 +35,13 @@ This project is to predict house prices in a Midwestern city as a function of va
 
 ## Technologies
 * R version: 3.5.2
-* ggplot2 version: 3.1.0
-* MASS version: 7.3-51.1
-* boot version: 1.3-20
-* leaps version: 3.0
-* caret version: 6.0-81
-* car version: 3.0-2
+* Package version
+  * ggplot2 version: 3.1.0
+  * MASS version: 7.3-51.1
+  * boot version: 1.3-20
+  * leaps version: 3.0
+  * caret version: 6.0-81
+  * car version: 3.0-2
 
 
 
