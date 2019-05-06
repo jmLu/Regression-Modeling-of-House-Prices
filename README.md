@@ -31,14 +31,14 @@ This project is to predict house prices in a Midwestern city as a function of va
 * choose the final model by comparing adjust R-square, MSE of train data, PRESS, MSE of cross-validation, MSE of test data
 * analyze the final model by checking the estimated coefficients, residual plots, qq plot and outlier and influential points. 
 
-## Technology
-* R version 3.5.2
-* ggplot2 version 3.1.0
-* MASS version 7.3-51.1
-* boot version 1.3-20
-* leaps version 3.0
-* caret version 6.0-81
-* car version 3.0-2
+## Technologies
+* R version: 3.5.2
+* ggplot2 version: 3.1.0
+* MASS version: 7.3-51.1
+* boot version: 1.3-20
+* leaps version: 3.0
+* caret version: 6.0-81
+* car version: 3.0-2
 
 
 
