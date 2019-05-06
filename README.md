@@ -20,9 +20,10 @@ This project is to predict house prices in a Midwestern city as a function of va
 ### Data Manipulation
 * Missing Value check
 * Add dummy variable for categorical variable: Quality
-* Visulize data by generating scatterplot for quantitative variables and boxplot for categorical variables
-* Tansform data: do log transformation to Price
-* Seperate data into train and test set
+* Visualize data by generating scatterplot for quantitative variables and boxplot for categorical variables
+* Transform data: do log transformation to Price based on Box-Cox method
+* Separate data into train and test set
+
 
 ### Model Building
 * use stepwise method to find preliminary model
