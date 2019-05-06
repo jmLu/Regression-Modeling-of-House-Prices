@@ -27,7 +27,9 @@ This project is to predict house prices in a Midwestern city as a function of va
 ### Model Building
 * use stepwise method to find preliminary model
 * check correlation and VIF between quantitative predictors and their interactions to remove highly correlated items
-* use exhaustive method on the preliminary model to find several optimal models
+* use exhaustive method on the preliminary model to find several alternative models
+* do cross validation for each alternative models
+* predict house prices of test data using each alternative models
 * choose the final model by comparing adjust R-square, MSE of train data, PRESS, MSE of cross-validation, MSE of test data
 * analyze the final model by checking the estimated coefficients, residual plots, qq plot and outlier and influential points. 
 
