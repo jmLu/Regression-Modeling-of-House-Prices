@@ -16,7 +16,7 @@ This project is to predict house prices in a Midwestern city as a function of va
 * Highway: Presence or absence of adjacency to highway: 1 if yes; 0 otherwise
 * Quality: Index for quality of construction: 1 = high quality; 2 = medium quality; 3 = low quality
 
-## Process
+## Process, Method and Analysis
 ### Data Manipulation
 * Missing Value check
 * Add dummy variable for categorical variable: Quality
@@ -32,7 +32,7 @@ This project is to predict house prices in a Midwestern city as a function of va
 * do cross validation for each candidate models
 * predict house prices of test data using each candidate models
 * choose the final model by comparing adjust R-square, MSE of train data, PRESS, MSE of cross-validation, MSE of test data
-* analyze the final model by checking the estimated coefficients, residual plots, qq plot and outlier and influential points. 
+* analyze the final model by checking the estimated coefficients, residual plots, qq plot, outlier and influential points. 
 
 ## Technologies
 * R version: 3.5.2
