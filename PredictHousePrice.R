@@ -1,9 +1,8 @@
 # title: "Predict House Price using Regression Model"
-# author: "Jingmei Lu"
-# date: "May 04, 2014"
+# date: "May, 2014"
 
 # load data
-housing <- read.table("D:\\SJSU\\Math261A\\project\\housing.txt", header=FALSE)
+housing <- read.table("D:\\project\\housing.txt", header=FALSE)
 
 # remove style column
 housing <- housing[,-11]
