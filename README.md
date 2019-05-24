@@ -1,4 +1,4 @@
-# Regression Analysis of House Prices
+# Regression Modeling of House Prices
 
 ## Description
 This project is to predict house prices in a Midwestern city as a function of various features of home and surrounding property.  The data includes 522 observations and 11 variables. By data transformation, model selection and variable selection, cross validation and model adequacy check, I developed a regression model to predict the house price in R.
