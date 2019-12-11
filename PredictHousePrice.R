@@ -141,7 +141,7 @@ sort(cd)
 #I decide to choose 3 possible influential points, which are 11, 103, 104. 
 #And I will pay attention to these 3 points after find the final model.
 
-# seperate data into train and test set
+# separate data into train and test set
 library(caret)
 set.seed(12340)
 train <- createDataPartition(housing$Price, p = .8, 
