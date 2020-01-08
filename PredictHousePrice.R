@@ -109,7 +109,7 @@ abline(0,1)
 
 # do 1/sqrt(y) transformation
 fit.pre.sqrt <- lm(I(1/sqrt(Price)) ~ Area + Bedroom + Bathroom + Aircon + Garage
-                   + Pool + Year + Quality + Lot + Highway, data=housing)
+                   + Pool + Age + Quality + Lot + Highway, data=housing)
 summary(fit.pre.sqrt)
 
 # check residual plot
