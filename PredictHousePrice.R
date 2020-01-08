@@ -172,6 +172,7 @@ fit.step.2<- step(Null, scope=list(upper=fit.full.all), data=housing_train,
 #Area:Quality + Area:Bathroom
 
 # check dependency between quantitative predictors
+attach(housing)
 x.cor <- cbind(Area, Age, Lot, Bathroom, Garage, Bedroom, Area*Bathroom,
                Area*Bedroom, Age*Bathroom, Area*Lot, Lot*Bathroom)
 colnames(x.cor)[7:11] <- c('Area*Bathroom', 'Area*Bedroom', 'Age*Bathroom',
