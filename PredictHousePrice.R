@@ -60,7 +60,7 @@ ggplot(data=housing, aes(x=factor(Aircon), y=Price)) +
 ggplot(data=housing, aes(x=factor(Highway), y=Price)) +
   geom_boxplot() +
   geom_point(position='jitter', color='blue', alpha=0.5) +
-  geom_rug(sides='l', color='black') +
+  geom_rug(sides='l', color='black')
 
 # fit preliminary model
 fit.preliminary <- lm(Price ~ Area + Bedroom + Bathroom + Aircon + Garage
