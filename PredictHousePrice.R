@@ -152,9 +152,9 @@ price_test <- housing_test$Price
 # stepwise model selection method using AIC as criterion
 Null <- lm(I(log(Price)) ~ 1, data=housing_train)
 fit.full.all <- lm(I(log(Price)) ~ Area*Bedroom*Bathroom*Garage*Age*Lot          
-*Aircon*Pool*Quality*Highway, data= housing_train)
+                   *Aircon*Pool*Quality*Highway, data= housing_train)
 fit.step<- step(Null, scope=list(upper=fit.full.all), data=housing_train, 
-direction="both")
+                direction="both")
 #The model selected is following:
 #Step:  AIC=-1557.04
 #I(log(Price)) ~ Area + Quality + Age + Lot + Garage + Bathroom +
@@ -165,7 +165,7 @@ direction="both")
 # stepwise using BIC
 n <- length(housing_train$Price)
 fit.step.2<- step(Null, scope=list(upper=fit.full.all), data=housing_train, 
-direction="both", k=log(n))
+                  direction="both", k=log(n))
 #The model selected is following:
 #Step:  AIC=-1479.6
 #I(log(Price)) ~ Area + Quality + Age + Lot + Garage + Bathroom + 
@@ -193,7 +193,7 @@ fit.full.update <- lm(I(log(Price)) ~ Area*Aircon*Pool*Quality*Highway
                                     + Lot*Aircon*Pool*Quality*Highway, 
                       data=housing_train)
 fit.step.update<- step(Null, scope=list(upper=fit.full.update), data=housing_train, 
-direction="both")
+                       direction="both")
 #The model selected is following:
 #Step:  AIC=-1524.05
 #I(log(Price)) ~ Area + Quality + Age + Lot + Garage + Bathroom + 
@@ -234,7 +234,7 @@ X <- cbind(area_train, Q2, Q3, age_train, lot_train, garage_train, bathroom_trai
            lot_train*aircon_train)
 library(leaps)
 all <- regsubsets(X, y=log(housing_train$Price),  method = "exhaustive", 
-all.best = FALSE, nbest = 3, data = housing_train)
+                  all.best = FALSE, nbest = 3, data = housing_train)
 Cp <- summary(all)$cp
 AdjR2 <- summary(all)$adjr2
 SSRes <- summary(all)$rss
@@ -286,8 +286,7 @@ MSE.final.1
 
 # model 2
 fit.final.2 <- lm(I(log(Price)) ~ Area + Quality + Age + Lot + Bathroom + Garage +    
-                                  Area*Quality + Bathroom*Quality, 
-                    data = housing_train)
+                                  Area*Quality + Bathroom*Quality, data = housing_train)
 summary(fit.final.2)
 #calculate PRESS
 press.final.2 <- sum((fit.final.2$residuals/(1-hatvalues(fit.final.2)))^2)
@@ -296,8 +295,7 @@ press.final.2
 # use cv.glm() from boot package
 set.seed(1234)
 glm.final.2 <- glm(I(log(Price)) ~ Area + Quality + Age + Lot + Bathroom + Garage + 
-                                   Area*Quality + Bathroom*Quality, 
-                   data = housing_train)
+                                   Area*Quality + Bathroom*Quality, data = housing_train)
 cv.error.2 <- cv.glm(data=housing_train, glm.final.2, K=5) 
 cv.error.2$delta
 # predict house price on test data
