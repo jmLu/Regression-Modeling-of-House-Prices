@@ -40,7 +40,7 @@ library(ggplot2)
 ggplot(data=housing, aes(x=Quality, y=Price)) +
   geom_boxplot() +
   #geom_point(position='jitter', color='blue',alpha=0.5) +
-  geom_rug(sides='l',color='black') +
+  geom_rug(sides='l',color='black')
 
 # create boxplot for with or without pool
 ggplot(data=housing, aes(x=factor(Pool), y=Price)) +
