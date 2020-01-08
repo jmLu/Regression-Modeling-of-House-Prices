@@ -144,9 +144,7 @@ sort(cd)
 # separate data into train and test set
 library(caret)
 set.seed(12340)
-train <- createDataPartition(housing$Price, p = .8, 
-list = FALSE, 
-times = 1)
+train <- createDataPartition(housing$Price, p = .8, list = FALSE, times = 1)
 housing_train <- housing[train,]
 housing_test <- housing[-train,]
 price_test <- housing_test$Price
