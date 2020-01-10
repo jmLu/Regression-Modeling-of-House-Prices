@@ -38,29 +38,28 @@ pairs(~Price+Area+Bedroom+Bathroom+Age+Lot+Garage, data=housing,
 # create boxplot for Quality
 library(ggplot2)
 ggplot(data=housing, aes(x=Quality, y=Price)) +
-  geom_boxplot() +
-  #geom_point(position='jitter', color='blue',alpha=0.5) +
-  geom_rug(sides='l',color='black')
+       geom_boxplot() +
+       geom_rug(sides='l',color='black')
 
 # create boxplot for with or without pool
 ggplot(data=housing, aes(x=factor(Pool), y=Price)) +
-  geom_boxplot() +
-  geom_point(position='jitter', color='blue', alpha=0.5) +
-  geom_rug(sides='l', color='black') + 
-  labs(title="House Price by Pool", x = "Pool", y="Price")
+       geom_boxplot() +
+       geom_point(position='jitter', color='blue', alpha=0.5) +
+       geom_rug(sides='l', color='black') + 
+       labs(title="House Price by Pool", x = "Pool", y="Price")
 
 # create boxplot for with or without airconditoner
 ggplot(data=housing, aes(x=factor(Aircon), y=Price)) +
-  geom_boxplot() +
-  geom_point(position='jitter', color='blue', alpha=0.5) +
-  geom_rug(sides='l', color='black') +
-  labs(title="House Price by Aircon", x = "Aircon", y="Price")
+       geom_boxplot() +
+       geom_point(position='jitter', color='blue', alpha=0.5) +
+       geom_rug(sides='l', color='black') +
+       labs(title="House Price by Aircon", x = "Aircon", y="Price")
 
 # create boxplot for Highway whether adjunt to highway
 ggplot(data=housing, aes(x=factor(Highway), y=Price)) +
-  geom_boxplot() +
-  geom_point(position='jitter', color='blue', alpha=0.5) +
-  geom_rug(sides='l', color='black')
+       geom_boxplot() +
+       geom_point(position='jitter', color='blue', alpha=0.5) +
+       geom_rug(sides='l', color='black')
 
 # fit preliminary model
 fit.preliminary <- lm(Price ~ Area + Bedroom + Bathroom + Aircon + Garage
